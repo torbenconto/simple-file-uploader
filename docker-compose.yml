@@ -1,0 +1,9 @@
+services:
+  main:
+    build: .
+    ports:
+      -  "8012:8012"
+    environment:
+      - MONGO_URI
+      - PORT=8012
+      - NODE_ENV=development
