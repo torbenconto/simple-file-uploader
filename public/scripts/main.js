@@ -50,7 +50,7 @@ function handleSubmit(event) {
             setErrorMessage(`Failed to upload the file. Status: ${xhr.status}, Response: ${errorResponse.message}`);
             if (errorResponse.fileId) {
                 let form = document.querySelector('form');
-                form.innerHTML = `<p>File already exists at: </p> <a href="/${errorResponse.sha256}">${errorResponse.fileId}</a>`;
+                form.innerHTML = `<p>File already exists at: </p> <a href="/${errorResponse.sha256}">${errorResponse.sha256}</a>`;
             }
         }
         setTimeout(clearErrorMessage, 5000); // Clear the message after 5 seconds
