@@ -12,8 +12,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 const mongoUri = process.env.MONGO_URI;
 
-app.enable('trust proxy')
-
 const uploadLimiter = rateLimit({
     windowMs: 5 * 60 * 1000, // 5 minutes
     max: 10, // limit each IP to 10 requests per windowMs
